@@ -6,14 +6,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function () {
+Route::get('/about/{nama}', function ($nama) {
+    return view('about', compact('nama'));
+});
+
+Route::get('/about/{nama}', function ($nama) {
     return view('about');
 });
 
 Route::get('/contact', function () {
-    return 'Halaman Contact';
+    return view('contact');
 });
 
 Route::get('/blog', function () {
-    return 'Halaman blog';
+    return view('blog');
 });
